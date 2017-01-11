@@ -1,5 +1,12 @@
 //output:index.html
 doctype HTML5
 html
-  body 
-    script(src=scripts/functions.js)
+  head
+    link(href="stylesheet.css", rel="stylesheet")
+  body(id="bg") 
+    img(src="ic_settings_white_24dp_1x.png")
+    .timeContainer
+      p(id="hourDisplay") hours
+      p(id="minuteDisplay") minutes
+      p(id="secondDisplay") seconds
+    script(src="scripts/functions.js", rel="text/Javascript")
