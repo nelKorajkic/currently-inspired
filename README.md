@@ -1,2 +1,3 @@
 # currently-inspired
-A homepage based on the Chrome Extension currently
+A homepage based on the Chrome Extension "Currently"
+
