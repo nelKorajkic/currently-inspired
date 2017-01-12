@@ -1,1 +1,1 @@
-body{background-color:#888}.timeContainer{text-align:center;height:90%}p{margin-top:35vh;margin-bottom:auto;height:60%;font-size:8em;color:#DDDDDD;display:inline-block}
+body{background-color:#888}.timeContainer{top:50%;left:50%;transform:translate3d(-50%, -50%, 0);position:absolute}.timeContainer p{font-size:8em;color:#DDDDDD}.sidebar{box-shadow:6px 0px 10px #555555;height:100vh;background-color:#DDDDDD;position:fixed;top:0;left:0}.sidebar img{float:right;background-color:#000000}#imgbtn{transition:transform 1s ease-in-out}#imgbtn:hover{transform:rotate(360deg)}

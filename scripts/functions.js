@@ -6,9 +6,13 @@ function timecheck() {
   console.log(minute);
   var second = date.getSeconds();
   console.log(second);
-  document.getElementById("hourDisplay").innerHTML = hour + ":";
-  document.getElementById("minuteDisplay").innerHTML = minute + ":";
-  document.getElementById("secondDisplay").innerHTML = second;
+  if (minute<10){
+    minute = "0" +minute;
+  }
+  if (second<10){
+    second = "0" +second;
+  }
+  document.getElementById("time").innerHTML = hour + ":"+minute + ":"+second;
 }
 var looper =setInterval(timecheck,1000);
 window.onload =timecheck;
