@@ -19,17 +19,20 @@ function timecheck() {
 }
 var looper =setInterval(timecheck,1000);
 window.onload =timecheck;
-//window.onload = bgSetter;
 
 
 $('img#imgbtn').click(function() {
-  console.log("memes");
   $('.sidebar').slideDown(300);
+  $('#overlay').show(3);
 });
 
-$('img#closeBtn','div').click(function() {
-  console.log("memes");
+$('img#closeBtn').click(function() {
   $('.sidebar').slideUp(300);
+  $('#overlay').hide(3);
+});
+$('#overlay').click(function() {
+  $('.sidebar').slideUp(300);
+  $('#overlay').hide(3);
 });
 
 $('.colorContainer div').click(function() {
