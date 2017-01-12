@@ -1,39 +1,43 @@
 //output:index.html
 doctype HTML5
+//Icons Provided by Google, Find them at material.io/icons/
 html
   head
+    link(href="https://fonts.googleapis.com/css?family=Roboto", rel="stylesheet")
     link(href="stylesheet.css", rel="stylesheet")
   body(id="bg") 
     img(id="imgBtn", src="ic_settings_white_24dp_1x.png")
     .sidebar
-      img(id="closeBtn", src="ic_settings_white_24dp_1x.png")
+      img(id="closeBtn", src="ic_close_black_24px.svg")
       h1 Pick a Background Color
       .colorContainer
         .color1
-          p #000000
+          p #83917a
         .color2
-          p #000000
+          p #2b748f
         .color3
-          p #000000
+          p #543956
         .color4
-          p #000000
+          p #ebcc89
         .color5
-          p #000000
+          p #387360
         .color6
-          p #000000
+          p #222222
         .color7
-          p #000000
+          p #54D5AD
         .color8
-          p #000000
+          p #0ee2db
         .color9
-          p #000000
+          p #6d6e99
         .color10
-          p #000000
+          p #3d1639
         .color11
-          p #000000
+          p #633636
         .color12
-          p #000000
+          p #a9a696
       
     .timeContainer
       p(id="time") 00:00:00
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
     script(src="scripts/functions.js", rel="text/Javascript")
+    
