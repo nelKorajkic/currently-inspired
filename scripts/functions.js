@@ -34,7 +34,8 @@ String(x);
 x = x.slice(9,16);
 //console.log(x);
 bgPicked = x;
-hexToRgb(bgPicked);
+console.log(bgPicked);
+bgSetter(bgPicked);
 
 // readCookie(x);
 // function readCookie(name) {
@@ -62,7 +63,6 @@ $('#overlay').click(function() {
 
 $('.colorContainer div').click(function() {
   var bgPicked = $(this).css('backgroundColor');
-  //console.log(bgPicked);
     var parts = bgPicked.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     delete(parts[0]);
     for (var i = 1; i <= 3; ++i) {
@@ -73,25 +73,17 @@ $('.colorContainer div').click(function() {
     bgSetter(bgPicked);
 });
 
-function bgSetter(bgPicked){
-  console.log(bgPicked);
-  document.getElementById("bg").style.backgroundColor = bgPicked;
-  console.log("did this happen?");
+function bgSetter(bgPicked){ document.getElementById("bg").style.backgroundColor = bgPicked;
   hexToRgb(bgPicked);
 }
 
 function hexToRgb(bgPicked) {
-    console.log(bgPicked);
-    var x = document.getElementById("bg").style.backgroundColor = bgPicked;
-    console.log(x);
-    bgPicked = bgPicked.slice(1,6);
+    bgPicked = bgPicked.slice(1,7);
     document.cookie ='bgCookie=#'+ bgPicked;
     var bigint = parseInt(bgPicked, 16);
     var r = (bigint >> 16) & 255;
     var g = (bigint >> 8) & 255;
     var b = bigint & 255;
-    bgPicked = "#" + bgPicked;
-    console.log(bgPicked);
     //perceptive luminance - human eye favor of the color green
     var a = 1 - ( (0.299 * r) + (0.587 * g) + (0.114 * b))/255;
     if (a < 0.5) {
