@@ -15,11 +15,24 @@ function timecheck() {
   if (second<10){
     second = "0" +second;
   }
+
+  var month = date.getMonth() + 1;
+  if (month<10) {
+    month = "0" +month;
+  }
+  var day = date.getDate();
+  if (day<10) {
+    day = "0" +day;
+  }
+  var year = date.getFullYear();
   document.getElementById("time").innerHTML = hour + ":"+minute + ":"+second;
+  document.title = hour + ":"+minute + ":"+second;
+  document.getElementById("date").innerHTML = month + ":"+day + ":"+year;
 }
 var looper =setInterval(timecheck,1000);
 window.onload =timecheck;
-
+//window.onload=hexToRgb();
+//var x = document.cookie;
 
 $('img#imgbtn').click(function() {
   $('.sidebar').slideDown(300);
@@ -56,7 +69,6 @@ function bgSetter(bgPicked){
 }
 
 function hexToRgb(bgPicked) {
-    console.log(bgPicked);
     var bigint = parseInt(bgPicked, 16);
     var r = (bigint >> 16) & 255;
     var g = (bigint >> 8) & 255;
@@ -64,10 +76,14 @@ function hexToRgb(bgPicked) {
 
     //perceptive luminance - human eye favor of the color green
     var a = 1 - ( (0.299 * r) + (0.587 * g) + (0.114 * b))/255;
-    if (a < 0.5)
-      document.getElementById("time").style.color = "#444444"; //bright colors - black font
-    else {
-      document.getElementById("time").style.color = "#DDDDDD"; //dark colors - white font
+    if (a < 0.5) {
+      //bright colors - black font
+      document.getElementById("time").style.color = "#444444";
+      document.getElementById("date").style.color ="#666666";
     }
-    return ;
+    else  {
+      //dark colors - white font
+      document.getElementById("time").style.color = "#DDDDDD";
+      document.getElementById("date").style.color ="#CCCCCC";
+    }
 }

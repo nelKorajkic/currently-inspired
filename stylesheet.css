@@ -24,6 +24,17 @@ body {
 .timeContainer p {
   font-size: 8em;
   color: #DDDDDD;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.timeContainer h5 {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  color: #CCCCCC;
+  font-size: 2em;
+  letter-spacing: 5px;
 }
 
 .sidebar {
