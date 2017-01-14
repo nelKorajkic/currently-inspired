@@ -3,6 +3,34 @@ function timecheck() {
   var hour = date.getHours();
   var minute = date.getMinutes();
   var second = date.getSeconds();
+
+  $('.buttonContainer button.12h').click(function() {
+    x = 12;
+    return x;
+  });
+  $('.buttonContainer button.24h').click(function() {
+    x = 24;
+    return x;
+  });
+  if (x==12) {
+    if (hour > 12) {
+      hour = hour - 12;
+      second = second + "PM";
+    }
+    else {
+      second = second + "AM";
+    }
+  }
+  //console.log(passed);
+  // if (buttonF === 1) {
+  //   hour = hour - 3;
+  //   console.log("yup");
+  // }
+  // else {
+  //   hour = date.getHours();
+  //   console.log("nope");
+  // }
+
   if (hour<10){
     hour = "0" +hour;
   }
@@ -22,17 +50,17 @@ function timecheck() {
   }
   var year = date.getFullYear();
   document.getElementById("time").innerHTML = hour + ":"+minute + ":"+second;
+
+
   document.title = hour + ":"+minute + ":"+second;
   document.getElementById("date").innerHTML = month + ":"+day + ":"+year;
 }
-
 var looper =setInterval(timecheck,1000);
-window.onload =timecheck;
+window.onload =timecheck(30);
 
 var x = document.cookie;
 String(x);
 x = x.slice(9,16);
-//console.log(x);
 bgPicked = x;
 console.log(bgPicked);
 bgSetter(bgPicked);
