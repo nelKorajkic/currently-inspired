@@ -140,6 +140,39 @@ body {
   color: #444444;
 }
 
+.timePicker {
+  width: 100%;
+}
+
+.timePicker .buttonContainer {
+  margin-top: 10px;
+}
+
+.timePicker button {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  background-color: #222222;
+  font-size: 1.3em;
+  color: #DDDDDD;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  margin: 0 10px;
+  transition: 100ms 1ms;
+}
+
+.timePicker button:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+  background-color: #4CAF50;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.timePicker button:active {
+  background-color: #4CAF50;
+}
+
 #imgbtn {
   transition: transform 1s ease-in-out;
 }
