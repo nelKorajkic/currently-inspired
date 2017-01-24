@@ -74,6 +74,7 @@ body {
   margin-bottom: 0px;
   height: 100px;
   width: 100px;
+  margin-left: 3px;
   display: inline-block;
 }
 
@@ -81,6 +82,7 @@ body {
   display: none;
   text-align: center;
   font-size: 1.3em;
+  display: none;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
